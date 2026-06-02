@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./favicons.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="./app.js" defer></script>
+    <title>ExpenseTracker</title>
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+<body>
+    <div class="hero_area">
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" alt="">
+              <span>
+                ExpenseTrack
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index1.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Tracker</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="quote_btn-container  d-flex justify-content-center">
+                <a href="">
+                  <img src="images/call.png" alt="">
+                  CALL : +91 xxxxxxxxx
+                </a>
+                <a href="">
+                  <span>
+                    
+                  </span>
+                  xyz@gmail.com
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+    <header class="container">
+
+        <div class="main-title flex">
+            <div class="dashborad-title">
+                <h1 class="title">Dashboard</h1>
+                <p>Hello!, Welcome.</p>
+            </div>
+
+            <div class="reset-btn flex" id="reset">
+                Reset
+            </div>
+        </div>
+        <main class="dashboard ">
+            <div class="budgetSection flex">
+                <div class="total-balnace flex fl-col">
+                    <div class="balance-title">
+                        <p>Your Balance</p>
+                    </div>
+                    <div class="balance-amount text-ellipise">
+                        <h1 id="balance-amount">Rs 00,000.00</h1>
+                    </div>
+                </div>
+
+                <!-- Add Budget Card -->
+
+                <div class="addBudget flex fl-col">
+                    <div class="budget-title">Budget</div>
+                    <form action="#" class="flex fl-col">
+                        <input type="number" class="input-feild" id="budgetAmount" placeholder="Enter your budget.."
+                            autofocus>
+                        <button class="primary-btn flex" id="addBudget">Add Budget <ion-icon
+                                name="arrow-forward-outline"></ion-icon></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="expenseSection flex">
+
+                <!-- Income And Expense Card / Expense List -->
+
+                <div class="expense-list-card flex fl-col">
+
+
+                    <div class="income-expense-cards flex">
+
+
+                        <div class="incomeCard flex fl-col text-ellises">
+                            <h2 class="income-title">Current Amount</h2>
+                            <h1 id="currentAmount" class="current-amount">Rs 00,000</h1>
+                        </div>
+                        <div class="expenseCard flex fl-col text-ellises">
+                            <h2 class="expense-title">Expense</h2>
+                            <h1 id="expenseAmount" class="expense-amount">Rs 00,000</h1>
+                        </div>
+                    </div>
+                    <div class="main-title">
+                        <h2>Expense List : </h2>
+                    </div>
+
+                    <div class="expenseList">
+                        <ul class="listITems flex fl-col" id="expenseList">
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="addExpense flex fl-col">
+                    <div class="expense-title">Add Expense</div>
+                    <form action="#" class="flex fl-col expenseForm" required>
+                        <div>
+                            <label>Expense Title: </label>
+                            <input type="text" class="input-feild" id="expTitle"
+                                placeholder="Enter your expense title.." required maxlength="15" autocomplete="off">
+                        </div>
+                        <div>
+                            <label>Expense Description: </label>
+                            <input type="text" class="input-feild" id="expDesc" placeholder="Enter your expense Desc.."
+                                required maxlength="30" autocomplete="off">
+                        </div>
+                        <div>
+                            <label>Expense Amount: </label>
+                            <input type="number" class="input-feild" id="expAmount" placeholder="Enter your expense.."
+                                required autocomplete="off">
+                        </div>
+
+                        <div>
+                            <label>Current Date: </label>
+                            <input type="date" class="input-feild" id="date" placeholder="Enter your expense.." required
+                                autocomplete="off">
+                        </div>
+
+                        <button class="primary-btn flex" id="addExpense">Add Expense <ion-icon
+                                name="arrow-forward-outline"></ion-icon></button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+    </header>
+
+    <!-- Footer Section -->
+
+    <footer class="flex container">
+        <div class="footer-text">
+            Made with love
+        </div>
+    </footer>
+
+   
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+        integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        
+</body>
+
+</html>
